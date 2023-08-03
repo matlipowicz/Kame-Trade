@@ -1,11 +1,11 @@
 # KameTrade
 
 =======
-![KameTrade](./assets/logo/Dark-version.svg)
+![KameTrade](./public/assets/logo/Dark-version.svg)
 
 # Web application is written in React in conjunction with TypeScript (still under development)
 
-## If you want to try it out here is a ![KameTrade](https://kame-trade.vercel.app/), but keep in mind that it is under continous developlment!
+## If you want to try it out here is a link: [KameTrade](https://kame-trade.vercel.app/), but keep in mind that it is under continous developlment!
 
 ## Why was it created in the first place?
 
