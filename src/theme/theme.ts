@@ -12,7 +12,7 @@ export const theme = extendTheme({
                 fontSize: "62.5%", // --> 1 rem = 10px
             },
             body: {
-                backgroundImage: "url(src/assets/miscellaneous/Stock-chart.svg)",
+                backgroundImage: "url(./assets/miscellaneous/Stock-chart.svg)",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",

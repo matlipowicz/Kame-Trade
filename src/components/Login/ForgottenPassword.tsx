@@ -36,7 +36,7 @@ export const ForgottenPassword = () => {
     const toastNotification = () => toast.success("Password has been changed", {});
 
     const onSubmit: SubmitHandler<Register> = async (registerData) => {
-        console.log(registerData);
+        // console.log(registerData);
         try {
             const { data, error } = await supabase.auth.resetPasswordForEmail(registerData.email, {
                 redirectTo: "http://localhost:5173/change-password",

@@ -1,13 +1,10 @@
 import { useState, useEffect, useContext } from "react";
-import logo from "src/assets/logo/Dark-version.svg";
 import { Flex, HStack, useDisclosure } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import { ButtonContainer } from "src/components/Nav/Buttons";
-
 import { NavBar } from "src/components/Nav/NavElements";
 import { SideNav } from "src/components/Nav/SideNav";
-
 import { AuthContext } from "src/context/AuthContext";
 import { AvatarOptions } from "src/components/Login/AvatarOptions";
 
@@ -44,7 +41,7 @@ export const Navigation = () => {
             >
                 <HStack w={"22rem"} _hover={{ cursor: "pointer" }}>
                     <Link to="/">
-                        <img src={logo} />
+                        <img src="./assets/logo/Dark-version.svg" />
                     </Link>
                 </HStack>
 

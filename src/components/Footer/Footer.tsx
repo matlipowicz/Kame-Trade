@@ -2,7 +2,6 @@ import { Flex, Box, Text, Image } from "@chakra-ui/react";
 import { IconContext } from "react-icons";
 import { IoLogoFacebook, IoLogoLinkedin, IoIosMail, IoLogoGithub } from "react-icons/io";
 import { Link } from "@chakra-ui/react";
-import logo from "src/assets/logo/Dark-version.svg";
 
 const ICONS = [
     { icon: <IoLogoGithub />, href: "https://github.com/matlipowicz" },
@@ -38,7 +37,7 @@ export const Footer = () => {
                     </Box>
                 </Flex>
                 <Box justifyContent="center" order={{ base: 1 }}>
-                    <Image src={logo} alt="footer-logo" w="17.5rem" h="5rem" />
+                    <Image src="./assets/logo/Dark-version.svg" alt="footer-logo" w="17.5rem" h="5rem" />
                 </Box>
                 <Flex gap="3rem" order={{ md: 3 }}>
                     {/* <Text as="b">Want to contact? Catch me on my socials</Text> */}

@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import { Box, Heading, Text, Image, Flex, Grid, ButtonGroup, Link, GridItem } from "@chakra-ui/react";
-import logo from "src/assets/logo/Dark-version.svg";
 import { RedGradientBtn } from "src/components/Buttons/RedGradientBtn";
 import { GoogleBtn } from "src/components/Buttons/GoogleSingIn";
 import { FormField } from "src/components/Login/FormControl";
@@ -110,7 +109,7 @@ export const SignIn = () => {
                             <Heading size="2xl" color="addition.800">
                                 Welcome back to
                             </Heading>
-                            <Image src={logo} w="20rem" />
+                            <Image src="./assets/miscellaneous/Dark-version.svg" w="20rem" />
                         </Box>
 
                         <FormField

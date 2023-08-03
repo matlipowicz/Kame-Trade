@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { FaUser, FaEnvelope, FaLock, FaKey } from "react-icons/fa";
 import { Box, Heading, Image, Flex, Grid, chakra, ButtonGroup, GridItem } from "@chakra-ui/react";
-import registerGraphics from "src/assets/miscellaneous/Register-graphics.svg";
+
 import { RedGradientBtn } from "src/components/Buttons/RedGradientBtn";
 import { FormField } from "./FormControl";
 import { ToastContainer, toast } from "react-toastify";
@@ -195,7 +195,7 @@ export const SignUp = () => {
                     </Heading>
 
                     <Box as="picture" w="100%" minW="40rem" maxW="75rem">
-                        <Image src={registerGraphics} alt="register-graphic" />
+                        <Image src="./assets/miscellaneous/Register-graphics.svg" alt="register-graphic" />
                     </Box>
                 </Flex>
             </GridItem>

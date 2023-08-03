@@ -88,7 +88,7 @@
 //                             onClick={() => coinsRefetch()}
 //                         >
 //                             <Image
-//                                 src="src/assets/miscellaneous/Crypto.svg"
+//                                 src="./assets/miscellaneous/Crypto.svg"
 //                                 sx={{
 //                                     cursor: hoverCrypto ? "pointer" : "",
 //                                     filter: hoverCrypto ? "contrast(120%)" : "",
@@ -115,7 +115,7 @@
 //                         </Box>
 //                         <Box as="picture" onMouseEnter={stocksHover.stocksMouseEnter} onMouseLeave={stocksHover.stocksMouseLeave}>
 //                             <Image
-//                                 src="src/assets/miscellaneous/Stocks.svg"
+//                                 src="./assets/miscellaneous/Stocks.svg"
 //                                 sx={{
 //                                     cursor: hoverStocks ? "pointer" : "",
 //                                     filter: hoverStocks ? "contrast(120%)" : "",
