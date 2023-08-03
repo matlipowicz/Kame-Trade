@@ -5,6 +5,8 @@
 
 # Web application is written in React in conjunction with TypeScript (still under development)
 
+## If you want to try it out here is a ![KameTrade](https://kame-trade.vercel.app/), but keep in mind that it is under continous developlment!
+
 ## Why was it created in the first place?
 
 I have wanted to learn more about cryptocurrencies, and stocks. It was designed to help me simulate investment with the current prices of certain assets. Simultaneously, I was finishing my main learning path to learn TypeScript and React, so I thought it would be a great idea to master already gained knowledge in React and Typescript in a noncommercial project.
