@@ -1,4 +1,4 @@
-import { Flex, Center, Box, Text, HStack, Image } from "@chakra-ui/react";
+import { Flex, Box, Text, Image } from "@chakra-ui/react";
 import { IconContext } from "react-icons";
 import { IoLogoFacebook, IoLogoLinkedin, IoIosMail, IoLogoGithub } from "react-icons/io";
 import { Link } from "@chakra-ui/react";

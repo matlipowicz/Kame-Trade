@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, FormControl, FormLabel, Input, Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { AssetTabs } from "src/components/Tables/AssetTabs";
 import { Coins } from "./TableAssets/Coins";
 import { Stocks } from "./TableAssets/Stocks";

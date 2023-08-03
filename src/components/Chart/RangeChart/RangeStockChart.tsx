@@ -40,9 +40,9 @@ const chartOptions = {
     autoSize: true,
 };
 
-export const RangeStockChart = ({ id, timePeriod, rangeChartData, historyPriceLoading, historyPrice }: RangeChartProps) => {
+export const RangeStockChart = ({ rangeChartData, historyPrice }: RangeChartProps) => {
     const chartContainer = useRef<HTMLDivElement | null>(null);
-    const [currentRangeChart, setRangeChart] = useState<ISeriesApi<"Area"> | null>(null);
+    const [_, setRangeChart] = useState<ISeriesApi<"Area"> | null>(null);
 
     useEffect(() => {
         if (rangeChartData) {

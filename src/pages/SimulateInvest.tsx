@@ -10,7 +10,7 @@
 
 // // SiBitcoinsv lub SiBitcoin
 
-// const SymulateInvest = () => {
+// const SimulateInvest = () => {
 //     const { isOpen, onOpen, onClose } = useModalContext();
 //     const [hoverCrypto, setHoverCrypto] = useState(false);
 //     const [hoverStocks, setHoverStocks] = useState(false);

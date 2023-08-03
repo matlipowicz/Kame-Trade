@@ -2,8 +2,7 @@ import { ButtonGroup } from "@chakra-ui/react";
 import { BlueBtn } from "../Buttons/BlueBtn";
 import { PurpleBtn } from "../Buttons/PurpleBtn";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
-import { supabase } from "src/config/supabase";
+// import { supabase } from "src/config/supabase";
 
 export const ButtonContainer = () => {
     const navigate = useNavigate();
@@ -11,12 +10,12 @@ export const ButtonContainer = () => {
     function handleClick(path: string) {
         navigate(path);
     }
-    const handleAuth = async () => {
-        let { data, error } = await supabase.auth.signInWithOAuth({
-            provider: "google",
-        });
-        console.log("Auth", data, error);
-    };
+    // const handleAuth = async () => {
+    //     let { data, error } = await supabase.auth.signInWithOAuth({
+    //         provider: "google",
+    //     });
+    //     console.log("Auth", data, error);
+    // };
 
     return (
         <>

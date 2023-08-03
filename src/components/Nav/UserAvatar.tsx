@@ -1,4 +1,4 @@
-import { Avatar as UserAvatar, AvatarBadge, AvatarGroup, Stack, Box, Text } from "@chakra-ui/react";
+import { Avatar as UserAvatar, Box } from "@chakra-ui/react";
 import { AuthContext } from "src/context/AuthContext";
 import { useContext } from "react";
 

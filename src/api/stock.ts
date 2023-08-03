@@ -1,14 +1,5 @@
 import axios from "axios";
-import {
-    StockLogo,
-    Profile,
-    StockHistory,
-    YahooStatisticsRootObject,
-    RootStockListObject,
-    QuoteTypes,
-    StockYahooProfile,
-    AssetProfile,
-} from "src/api/types";
+import { StockLogo, Profile, StockHistory, YahooStatisticsRootObject, RootStockListObject, QuoteTypes, AssetProfile } from "src/api/types";
 
 if (typeof import.meta.env.VITE_COINRANKING_API_KEY === "undefined") {
     throw new Error("Please provide api key");

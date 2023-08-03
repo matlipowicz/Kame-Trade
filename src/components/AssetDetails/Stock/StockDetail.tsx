@@ -26,24 +26,24 @@ export const StockDetails = () => {
 
     const {
         data: stockLogo,
-        isFetching: stockLogoFetching,
-        error: stockLogoError,
+        // isFetching: stockLogoFetching,
+        // error: stockLogoError,
     } = useQuery({
         queryKey: ["logo", { symbol: id as string }],
         queryFn: () => twelveStockLogo(id as string),
     });
     const {
         data: stockStatistics,
-        isFetching: stockStatisticsFetching,
-        error: stockStatisticsError,
+        // isFetching: stockStatisticsFetching,
+        // error: stockStatisticsError,
     } = useQuery({
         queryKey: ["quote", { symbol: id as string, interval: "1day" as string }],
         queryFn: () => twelveLastQuote({ symbol: id as string, interval: "1day" as string }),
     });
     const {
         data: stockProfile,
-        isFetching: stockProfileFetching,
-        error: stockProfileError,
+        // isFetching: stockProfileFetching,
+        // error: stockProfileError,
     } = useQuery({
         queryKey: ["profile", { symbol: id as string }],
         queryFn: () => yahooStockProfile(id as string),
@@ -51,8 +51,8 @@ export const StockDetails = () => {
 
     const {
         data: stockTotalPrice,
-        isFetching: stockTotalPriceFetching,
-        error: stockTotalPriceError,
+        // isFetching: stockTotalPriceFetching,
+        // error: stockTotalPriceError,
     } = useQuery({
         queryKey: ["totalPrice", { symbol: id as string }],
         queryFn: () => yahooTotalPrice(id as string),

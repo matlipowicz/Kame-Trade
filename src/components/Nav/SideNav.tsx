@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Box, Flex, Drawer, DrawerBody, DrawerFooter, DrawerOverlay, DrawerContent, DrawerCloseButton, Button, Hide } from "@chakra-ui/react";
+import { Box, Flex, Drawer, DrawerBody, DrawerFooter, DrawerOverlay, DrawerContent, Hide } from "@chakra-ui/react";
 import { CloseIcon } from "@chakra-ui/icons";
 import { ButtonContainer } from "src/components/Nav/Buttons";
 import { NavBar } from "src/components/Nav/NavElements";

@@ -9,8 +9,8 @@ import { TableHead } from "src/components/Tables/TableElements/TableHead";
 import { TableBody } from "src/components/Tables/TableElements/TableBody";
 import { StockColumns } from "src/components/Tables/ColumnsDef/StockColumns";
 import { filterFns } from "src/components/Tables/Filter/Filter";
-import { twelveStockList, twelveStockLogo, twelveStockProfile, twelveLastQuote } from "src/api/stock";
-import { yahooTotalPrice } from "src/api/stock";
+import { twelveStockList } from "src/api/stock";
+// import { yahooTotalPrice } from "src/api/stock";
 
 // TODO: types for table props and data
 const { contains } = filterFns;
@@ -25,17 +25,17 @@ export const Stocks = ({
         queryKey: ["stocks", { exchange: "NASDAQ", format: "json" }],
         queryFn: twelveStockList,
     });
-    const { data: stockDetail } = useQuery({
-        queryKey: ["quote", { symbol: "AAPL", interval: "1day" }],
-        queryFn: () => twelveLastQuote({ symbol: "AAPL", interval: "1day" }),
-    });
-    const { data: stockStatistic } = useQuery({
-        queryKey: ["qu", { symbol: "AAPL" }],
-        queryFn: () => yahooTotalPrice("AAPL"),
-    });
+    // const { data: stockDetail } = useQuery({
+    //     queryKey: ["quote", { symbol: "AAPL", interval: "1day" }],
+    //     queryFn: () => twelveLastQuote({ symbol: "AAPL", interval: "1day" }),
+    // });
+    // const { data: stockStatistic } = useQuery({
+    //     queryKey: ["qu", { symbol: "AAPL" }],
+    //     queryFn: () => yahooTotalPrice("AAPL"),
+    // });
 
-    const stockDetailData = stockDetail;
-    const stockStatisticData = stockStatistic?.defaultKeyStatistics;
+    // const stockDetailData = stockDetail;
+    // const stockStatisticData = stockStatistic?.defaultKeyStatistics;
     const stockListData = stocksList?.data;
 
     const stockTable = useReactTable({

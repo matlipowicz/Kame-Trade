@@ -1,9 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
 import { fonts } from "./fonts";
 import { colors } from "./colors";
-const activeLabelStyles = {
-    transform: "scale(0.85) translateY(-24px)",
-};
+
 export const theme = extendTheme({
     colors,
     fonts,

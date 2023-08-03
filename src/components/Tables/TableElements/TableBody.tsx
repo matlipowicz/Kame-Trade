@@ -1,4 +1,4 @@
-import { Tbody, Tr, Td, Box } from "@chakra-ui/react";
+import { Tbody, Tr, Td } from "@chakra-ui/react";
 import { flexRender } from "@tanstack/react-table";
 import { Table } from "@tanstack/react-table";
 

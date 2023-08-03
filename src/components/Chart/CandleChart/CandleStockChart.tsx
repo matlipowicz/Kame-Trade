@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ColorType, createChart, ISeriesApi, Time, UTCTimestamp } from "lightweight-charts";
+import { ColorType, createChart, ISeriesApi, UTCTimestamp } from "lightweight-charts";
 import { Box } from "@chakra-ui/react";
 import { StockHistory } from "src/api/types";
 
@@ -43,9 +43,9 @@ const chartOptions = {
     autoSize: true,
 };
 
-export const CandleStockChart = ({ id, timePeriod, candleChartData, historyPriceLoading, historyPrice }: CandleChartProps) => {
+export const CandleStockChart = ({ candleChartData, historyPrice }: CandleChartProps) => {
     const candleChartContainer = useRef<HTMLDivElement | null>(null);
-    const [currentCandleChart, setCandleChart] = useState<ISeriesApi<"Candlestick"> | null>(null);
+    const [_, setCandleChart] = useState<ISeriesApi<"Candlestick"> | null>(null);
 
     useEffect(() => {
         if (candleChartData) {

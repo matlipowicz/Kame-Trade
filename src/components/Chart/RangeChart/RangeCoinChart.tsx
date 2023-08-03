@@ -28,14 +28,14 @@ const chartOptions = {
 
 export const RangeChart = ({ uuid, timePeriod }: { uuid: string; timePeriod: string }) => {
     const chartContainer = useRef<HTMLDivElement | null>(null);
-    const [currentRangeChart, setRangeChart] = useState<ISeriesApi<"Area"> | null>(null);
+    const [_, setRangeChart] = useState<ISeriesApi<"Area"> | null>(null);
 
     //! Coin history price call
 
     const {
         data: coinHistory,
-        isLoading: coinHistoryLoading,
-        error: coinHistoryError,
+        // isLoading: coinHistoryLoading,
+        // error: coinHistoryError,
     } = useQuery({
         queryKey: ["coinHistory", { uuid: uuid, timePeriod: timePeriod }],
         queryFn: () => historyCoinData({ uuid: uuid as string, timePeriod: timePeriod }),

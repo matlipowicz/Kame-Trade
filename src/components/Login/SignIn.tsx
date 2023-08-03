@@ -49,7 +49,7 @@ export const SignIn = () => {
 
     const onSubmit: SubmitHandler<LoginInputs> = async (loginData) => {
         try {
-            const { data, error } = await supabase.auth.signInWithPassword({
+            const { error } = await supabase.auth.signInWithPassword({
                 email: loginData.email,
                 password: loginData.password,
             });
@@ -66,7 +66,7 @@ export const SignIn = () => {
 
     const signInWithGoogle = async () => {
         try {
-            let { data, error } = await supabase.auth.signInWithOAuth({
+            let { error } = await supabase.auth.signInWithOAuth({
                 provider: "google",
             });
             if (error) throw error;

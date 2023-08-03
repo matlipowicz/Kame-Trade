@@ -1,5 +1,5 @@
 import { useReactTable, getCoreRowModel, getSortedRowModel, getPaginationRowModel, getFilteredRowModel } from "@tanstack/react-table";
-import { Table, HStack, Input, Box } from "@chakra-ui/react";
+import { Table, HStack, Box } from "@chakra-ui/react";
 import { TablePagination } from "src/components/Pagination/TablePagination";
 import { RowSelector } from "src/components/Tables/RowSelector";
 import { CoinColumns } from "src/components/Tables/ColumnsDef/CoinColumns";

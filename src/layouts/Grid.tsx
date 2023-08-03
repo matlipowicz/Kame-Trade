@@ -1,4 +1,4 @@
-import { Grid, GridItem, SimpleGrid } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 export const GridLayout = ({ children }: { children: ReactNode }) => {

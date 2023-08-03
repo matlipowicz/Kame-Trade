@@ -12,14 +12,14 @@ type ChartProps = {
     historyPeriod: string;
 };
 
-type RangeChartProps = {
-    rangeChartData:
-        | {
-              time: UTCTimestamp;
-              value: number;
-          }[]
-        | undefined;
-};
+// type RangeChartProps = {
+//     rangeChartData:
+//         | {
+//               time: UTCTimestamp;
+//               value: number;
+//           }[]
+//         | undefined;
+// };
 
 export const StockCharts = ({ chartType, id, historyPeriod }: ChartProps) => {
     const [ohlcPeriod, setOhlcPeriod] = useState<{ symbol: string; interval: string; outputsize: number }>({
@@ -31,7 +31,7 @@ export const StockCharts = ({ chartType, id, historyPeriod }: ChartProps) => {
     const {
         data: historyPrice,
         isLoading: historyPriceLoading,
-        error: historyPriceError,
+        // error: historyPriceError,
     } = useQuery({
         queryKey: ["time_series", { ohlcPeriod }],
         queryFn: () => twelveHistoryStockData(ohlcPeriod),

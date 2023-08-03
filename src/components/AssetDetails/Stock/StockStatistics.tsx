@@ -1,4 +1,4 @@
-import { Box, Text, Icon, chakra, Table, Tbody, Tr, Th, Td, Link, Flex, Heading } from "@chakra-ui/react";
+import { Box, Icon, chakra, Table, Tbody, Tr, Th, Td, Heading } from "@chakra-ui/react";
 import { MdOutlineQueryStats } from "react-icons/md";
 import { AiOutlineLock, AiOutlineUnlock } from "react-icons/ai";
 import { BsCalendar3Week } from "react-icons/bs";

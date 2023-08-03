@@ -6,7 +6,7 @@ import "@fontsource/saira/200.css";
 import "@fontsource/saira/700.css";
 import { Navigation } from "./components/Nav/Nav.tsx";
 import { Footer } from "./components/Footer/Footer.tsx";
-import { About, Browse, Profile, SymulateInvest, ForgotPassword, ChangePassword } from "./pages/index";
+import { About, Browse, ForgotPassword, ChangePassword } from "./pages/index";
 import { CoinDetails } from "src/components/AssetDetails/Coin/CoinDetails.tsx";
 import { StockDetails } from "src/components/AssetDetails/Stock/StockDetail.tsx";
 import { GridLayout } from "src/layouts/Grid.tsx";

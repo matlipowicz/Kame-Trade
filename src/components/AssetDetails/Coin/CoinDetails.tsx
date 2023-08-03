@@ -1,5 +1,5 @@
 import { ChangeEvent, useState, useContext } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Flex, GridItem, Box, Text, Image, Heading, chakra, Grid, VStack, ButtonGroup } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import { RedGradientBtn } from "src/components/Buttons/RedGradientBtn";
@@ -17,13 +17,13 @@ export const CoinDetails = () => {
     const [chartType, setChartType] = useState<string>("range");
     const [historyPeriod, setHistoryPeriod] = useState<string>("24h");
     const periods = ["24h", "7d", "30d", "3m", "1y", "3y", "5y"];
-    const navigate = useNavigate();
+
     //! Coin current price call
 
     const {
         data: coin,
-        isLoading: coinDetailLoading,
-        error: coinDetailError,
+        // isLoading: coinDetailLoading,
+        // error: coinDetailError,
     } = useQuery({
         queryKey: ["coin", { uuid: uuid, timePeriod: historyPeriod }],
         queryFn: () => coinDetails({ uuid: uuid as string, timePeriod: historyPeriod }),
@@ -31,8 +31,8 @@ export const CoinDetails = () => {
     });
     const {
         data: coinCurrentPrice,
-        isLoading: coinPriceDetailLoading,
-        error: coinPriceDetailError,
+        // isLoading: coinPriceDetailLoading,
+        // error: coinPriceDetailError,
     } = useQuery({
         queryKey: ["coinPrice", { uuid: uuid }],
         queryFn: () => coinPrice(uuid as string),

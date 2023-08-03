@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { Input, InputGroup, InputLeftElement, Icon, Stack } from "@chakra-ui/react";
+import { Input, InputGroup, InputLeftElement, Stack } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 
 interface Props extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "onChange"> {

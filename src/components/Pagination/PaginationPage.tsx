@@ -1,5 +1,4 @@
 import { Link, ListItem } from "@chakra-ui/react";
-import { TableProps } from "./TablePagination";
 import { Table } from "@tanstack/react-table";
 
 // TODO: Add dots after 5th page, then

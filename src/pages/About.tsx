@@ -1,4 +1,4 @@
-import { SimpleGrid, Box, Image, Text, Button, Heading, GridItem } from "@chakra-ui/react";
+import { SimpleGrid, Box, Image, Text, Heading, GridItem } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import graph from "src/assets/miscellaneous/About-graphics.svg";
 import { RedGradientBtn } from "src/components/Buttons/RedGradientBtn";

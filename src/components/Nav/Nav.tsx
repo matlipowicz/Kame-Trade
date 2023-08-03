@@ -1,13 +1,13 @@
 import { useState, useEffect, useContext } from "react";
 import logo from "src/assets/logo/Dark-version.svg";
-import { Box, Flex, Spacer, Text, HStack, useDisclosure, IconButton, Button } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { Flex, HStack, useDisclosure } from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import { ButtonContainer } from "src/components/Nav/Buttons";
 
 import { NavBar } from "src/components/Nav/NavElements";
 import { SideNav } from "src/components/Nav/SideNav";
-import { Avatar } from "src/components/Nav/UserAvatar";
+
 import { AuthContext } from "src/context/AuthContext";
 import { AvatarOptions } from "src/components/Login/AvatarOptions";
 

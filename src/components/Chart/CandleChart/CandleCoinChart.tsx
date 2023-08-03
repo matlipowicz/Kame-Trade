@@ -31,15 +31,15 @@ const chartOptions = {
 
 export const CandleChart = ({ uuid, timePeriod }: { uuid: string; timePeriod: string }) => {
     const candleChartContainer = useRef<HTMLDivElement | null>(null);
-    const [currentCandleChart, setCandleChart] = useState<ISeriesApi<"Candlestick"> | null>(null);
+    const [_, setCandleChart] = useState<ISeriesApi<"Candlestick"> | null>(null);
     const [ohlcPeriod, setOhlcPeriod] = useState<any>({ uuid: uuid, timePeriod: "minute", limit: "1440" });
 
     //! OHLC data call
 
     const {
         data: ohlcData,
-        isLoading: ohlcDataLoading,
-        error: ohlcDataError,
+        // isLoading: ohlcDataLoading,
+        // error: ohlcDataError,
     } = useQuery({
         queryKey: ["coinHistory", { uuid: uuid, timePeriod: timePeriod }],
         queryFn: () => OHLCData(ohlcPeriod),
