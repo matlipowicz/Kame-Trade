@@ -1,5 +1,5 @@
 import { Image, Box, GridItem } from "@chakra-ui/react";
-import img from "src/assets/miscellaneous/Under-construction.png";
+import img from "./assets/miscellaneous/Under-construction.png";
 
 export const Construction = () => {
     return (
