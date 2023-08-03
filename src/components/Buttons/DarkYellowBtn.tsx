@@ -1,4 +1,4 @@
-import { Button, Icon } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 
 export const DarkYellowBtn = ({ children, onClick }: { children: React.ReactNode; onClick: () => void }) => {
     return (
