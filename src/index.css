@@ -1,0 +1,33 @@
+/* ! Reset and default styles */
+:root {
+    --toastify-color-dark: #fe3e6c;
+    --toastify-color-error: rgba(255, 255, 255, 0.5);
+    --toastify-color-transparent: rgba(0, 0, 0, 0.7);
+    --toastify-color-light: #77dd77;
+    --toastify-color-success: #28a228;
+    --toastify-text-color-light: rgba(13, 52, 13, 0.5);
+    --toastify-text-color-dark: rgba(255, 255, 255, 0.5);
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 1 rem = 10px */
+    height: 100vh;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    font-size: 2rem;
+    position: relative;
+    /* background-image: url(src/assets/miscellaneous/Stock-chart.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
