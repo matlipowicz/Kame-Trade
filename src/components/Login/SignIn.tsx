@@ -109,7 +109,7 @@ export const SignIn = () => {
                             <Heading size="2xl" color="addition.800">
                                 Welcome back to
                             </Heading>
-                            <Image src="./assets/miscellaneous/Dark-version.svg" w="20rem" />
+                            <Image src="./assets/logo/Dark-version.svg" w="20rem" />
                         </Box>
 
                         <FormField
