@@ -1,6 +1,5 @@
 # KameTrade
 
-=======
 ![KameTrade](./public/assets/logo/Dark-version.svg)
 
 # Web application is written in React in conjunction with TypeScript (still under development)
