@@ -57,7 +57,7 @@ export const CoinDetails = () => {
                 as="main"
                 gridColumn={"span 2"}
                 gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
-                p={{ base: "4rem 6rem", lg: "6rem 12rem", xl: "8rem 14rem" }}
+                p={{ base: "2rem 3rem", lg: "6rem 12rem", xl: "8rem 14rem" }}
                 gap={{ base: "6rem", lg: "12rem" }}
             >
                 <GridItem colSpan={{ base: 1, lg: 2 }} justifySelf="end">
@@ -114,6 +114,8 @@ export const CoinDetails = () => {
                         <Box
                             bg={"rgba(0,0,0,0.16)"}
                             p={{ base: "3rem", lg: "6rem" }}
+                            h="100%"
+                            w="100%"
                             borderRadius="0.375rem"
                             backdropFilter="blur(1rem)"
                             boxShadow="2px 14px 19px -10px rgba(0, 0, 0, 0.5)"
@@ -126,7 +128,7 @@ export const CoinDetails = () => {
                             <Text>{details?.description}</Text>
                         </Box>
 
-                        <ButtonGroup w="100%" gap="5rem">
+                        <ButtonGroup w="100%" gap={{ base: "3rem", md: "5rem" }}>
                             <GreenGradientBtn
                                 onClick={() => {
                                     return;

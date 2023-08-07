@@ -83,7 +83,7 @@ export const RangeChart = ({ uuid, timePeriod }: { uuid: string; timePeriod: str
             <Box
                 ref={chartContainer}
                 id="chart-container"
-                w="60vw"
+                w="80vw"
                 h={{ base: "30vh", md: "40vh", xl: "60vh" }}
                 boxShadow={"1px 21px 32px -33px rgba(0, 0, 0, 1)"}
             ></Box>

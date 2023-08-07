@@ -43,7 +43,7 @@ export function App() {
                                     <Route
                                         index
                                         element={
-                                            <GridItem colSpan={{ base: 1, lg: 2 }}>
+                                            <GridItem colSpan={2}>
                                                 <Browse />
                                             </GridItem>
                                         }

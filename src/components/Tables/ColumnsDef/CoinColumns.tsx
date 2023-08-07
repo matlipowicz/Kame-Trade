@@ -1,6 +1,6 @@
 import { Coins } from "src/api/types";
 import { Link as RouterLink } from "react-router-dom";
-import { Box, Text, Image, HStack, Button, chakra } from "@chakra-ui/react";
+import { Box, Text, Image, HStack, Button, chakra, Hide } from "@chakra-ui/react";
 import { ColumnDef } from "@tanstack/react-table";
 import { createColumnHelper } from "@tanstack/react-table";
 import millify from "millify";
@@ -13,10 +13,10 @@ export type DataTableProps<Data extends object> = {
 const columnHelper = createColumnHelper<Coins>();
 export const CoinColumns = [
     columnHelper.accessor("name", {
-        header: () => <Text>Coin</Text>,
+        header: () => <Text position="sticky">Coin</Text>,
         cell: (info) => {
             return (
-                <HStack display="flex" gap="3rem" w="36rem">
+                <HStack display="flex" gap="3rem" w={{ lg: "45rem" }} maxW={{ base: "36rem" }}>
                     <Box w="5rem" h="5rem">
                         <Image src={info.row.original.iconUrl} alt="Coin logo" maxH="100%" maxW="100%" />
                     </Box>
@@ -33,7 +33,11 @@ export const CoinColumns = [
                                 {info.row.original.symbol}
                             </Button>
                         </RouterLink>
-                        <Text>{info.row.original.name}</Text>
+                        <Hide breakpoint="(max-width: 565px)">
+                            <Text lineHeight="2rem" textAlign="left">
+                                {info.row.original.name}
+                            </Text>
+                        </Hide>
                     </Box>
                 </HStack>
             );
@@ -46,10 +50,12 @@ export const CoinColumns = [
     columnHelper.accessor("rank", {
         cell: (info) => info.getValue(),
         header: () => "Rank",
+
         meta: {
             isNumeric: true,
             enableColumnFilters: true,
         },
+        enableHiding: true,
     }),
     columnHelper.accessor("price", {
         cell: (info) => {
@@ -79,6 +85,7 @@ export const CoinColumns = [
         meta: {
             isNumeric: true,
         },
+        enableHiding: true,
     }),
     columnHelper.accessor("24hVolume", {
         cell: (info) => {
@@ -96,6 +103,7 @@ export const CoinColumns = [
             isNumeric: true,
             enableColumnFilters: false,
         },
+        enableHiding: true,
     }),
     columnHelper.accessor("marketCap", {
         cell: (info) => {
@@ -113,5 +121,6 @@ export const CoinColumns = [
             isNumeric: true,
             enableColumnFilters: false,
         },
+        enableHiding: true,
     }),
 ];

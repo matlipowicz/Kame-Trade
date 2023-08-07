@@ -11,8 +11,6 @@ export const TableHead = <T,>({ table }: { table: Table<T> }) => {
                     <Tr key={headerGroup.id}>
                         {headerGroup.headers.map((header) => {
                             return (
-                                // <Box className="headers" position="sticky" top="0" zIndex="1">
-                                //     <Box className="scroller">
                                 <Th
                                     key={header.id}
                                     onClick={header.column.getToggleSortingHandler()}
@@ -44,8 +42,6 @@ export const TableHead = <T,>({ table }: { table: Table<T> }) => {
                                         </Box>
                                     </HStack>
                                 </Th>
-                                //     </Box>
-                                // </Box>
                             );
                         })}
                     </Tr>

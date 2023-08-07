@@ -2,8 +2,9 @@ import { Tbody, Tr, Td } from "@chakra-ui/react";
 import { flexRender } from "@tanstack/react-table";
 import { Table } from "@tanstack/react-table";
 
-export const TableBody = <T extends { name: string }>({ table }: { table: Table<T> }) => {
+export const TableBody = <T,>({ table }: { table: Table<T> }) => {
     // TODO: Change index key to other unique value
+
     return (
         <>
             <Tbody maxW="120rem">

@@ -76,7 +76,7 @@ export const CandleStockChart = ({ candleChartData, historyPrice }: CandleChartP
 
     return (
         <>
-            <Box ref={candleChartContainer} id="chart-container" w="60vw" h={{ base: "30vh", md: "40vh", xl: "60vh" }}></Box>
+            <Box ref={candleChartContainer} id="chart-container" w="80vw" h={{ base: "30vh", md: "40vh", xl: "60vh" }}></Box>
         </>
     );
 };

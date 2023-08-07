@@ -27,18 +27,15 @@ export function BrowseTable() {
                 justifyContent="center"
                 alignItems="center"
                 flexDir="column"
-                paddingTop="clamp(6rem,6vh,10rem)"
-                paddingBottom="clamp(6rem,6vh,10rem)"
-                paddingRight="clamp(6rem,10vh,12rem)"
-                paddingLeft="clamp(6rem,10vh,12rem)"
+                p={{ base: "4rem 0", md: "4.5rem 8rem", lg: "5rem 10rem", xl: "6rem 12rem" }}
                 as="section"
                 position="relative"
             >
-                <Flex w="100%" justifyContent="space-between" alignItems="center">
+                <Flex w="100%" justifyContent="space-between" alignItems="stretch" flexDir={{ base: "column", lg: "row" }}>
                     <Box h="100%">
                         <AssetTabs />
                     </Box>
-                    <Box alignSelf="end">
+                    <Box alignSelf={{ lg: "end" }}>
                         {assetTab === "coin-tab" ? (
                             <DebouncedInput
                                 value={cryptoGlobalFilter ?? ""}

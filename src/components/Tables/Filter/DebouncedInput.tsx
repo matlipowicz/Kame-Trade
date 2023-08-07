@@ -44,7 +44,7 @@ export const DebouncedInput = ({ value: initialValue, onChange, debounceTime = 3
                     minW="30rem"
                     fontSize="1.8rem"
                     padding="2.5rem 5rem"
-                    borderRadius="0.375rem 0.375rem 0 0 "
+                    borderRadius={{ base: "0 0 0 0", lg: "0.375rem 0.375rem 0 0" }}
                     borderColor="addition.700"
                     borderWidth="0.2rem"
                     _hover={{ borderColor: "addition.700" }}
