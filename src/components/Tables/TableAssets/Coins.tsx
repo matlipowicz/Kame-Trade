@@ -1,3 +1,4 @@
+import { useState, useEffect, useCallback } from "react";
 import { useReactTable, getCoreRowModel, getSortedRowModel, getPaginationRowModel, getFilteredRowModel } from "@tanstack/react-table";
 import { Table, HStack, Box } from "@chakra-ui/react";
 import { TablePagination } from "src/components/Pagination/TablePagination";
@@ -14,6 +15,39 @@ import { coinsData } from "src/api/crypto";
 const { contains } = filterFns;
 
 export const Coins = ({ globalFilter, setGlobalFilter }: { globalFilter: string; setGlobalFilter: React.Dispatch<React.SetStateAction<string>> }) => {
+    const [_, setColumnVisibility] = useState({});
+    const [test, setTest] = useState<number>(0);
+    const [visible, setVisible] = useState<any>({ rank: true, change: true, marketCap: true, "24hVolume": true, price: true });
+
+    const handleWindowResize = useCallback(() => {
+        setTest(window.innerWidth);
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener("resize", handleWindowResize);
+        return () => {
+            window.removeEventListener("resize", handleWindowResize);
+        };
+    }, [handleWindowResize]);
+
+    useEffect(() => {
+        if (window.innerWidth <= 1150) {
+            setVisible({
+                rank: false,
+                change: false,
+                marketCap: false,
+                "24hVolume": false,
+            });
+        } else {
+            setVisible({
+                rank: true,
+                change: true,
+                marketCap: true,
+                "24hVolume": true,
+            });
+        }
+    }, [test]);
+
     const {
         data: coinsTable,
         isLoading: coinsTableLoading,
@@ -22,6 +56,8 @@ export const Coins = ({ globalFilter, setGlobalFilter }: { globalFilter: string;
         queryKey: ["coins", { limit: 750 }],
         queryFn: () => coinsData(750),
     });
+
+    console.log(visible);
 
     const coinsDataResponse = coinsTable?.data?.coins;
 
@@ -34,7 +70,10 @@ export const Coins = ({ globalFilter, setGlobalFilter }: { globalFilter: string;
         getFilteredRowModel: getFilteredRowModel(),
         state: {
             globalFilter,
+            columnVisibility: visible,
         },
+
+        onColumnVisibilityChange: setColumnVisibility,
         onGlobalFilterChange: setGlobalFilter,
         globalFilterFn: contains,
     });
@@ -46,7 +85,6 @@ export const Coins = ({ globalFilter, setGlobalFilter }: { globalFilter: string;
     const columnQuantity: number = coinTable.options.columns.length;
     return (
         <>
-            {/* overflowX="scroll" */}
             <Box>
                 <Table bg="rgba(0,0,0,0.16)" backdropFilter="blur(1rem)" boxShadow="2px 14px 19px -10px rgba(0, 0, 0, 0.5)">
                     <TableHead table={coinTable} />

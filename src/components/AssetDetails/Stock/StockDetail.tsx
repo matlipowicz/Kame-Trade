@@ -139,9 +139,10 @@ export const StockDetails = () => {
                                     borderRadius="0.375rem"
                                     backdropFilter="blur(1rem)"
                                     boxShadow="2px 14px 19px -10px rgba(0, 0, 0, 0.5)"
+                                    w="100%"
                                 >
                                     <Heading size="2xl" mb={{ base: "2rem", lg: "3rem" }}>{`About ${statisticData.name}`}</Heading>
-                                    <Grid gridTemplateColumns={{ base: "repeat(2,1fr)", "2xl": "repeat(3,1fr)" }} gap="3rem" w={{ base: "100%" }}>
+                                    <Grid gridTemplateColumns={{ base: "1fr", md: "repeat(2,1fr)", "2xl": "repeat(3,1fr)" }} gap="3rem">
                                         <Box>
                                             <Text fontWeight={700}>Sector</Text>
                                             <Text>
@@ -244,15 +245,15 @@ export const StockDetails = () => {
                             </VStack>
                         </GridItem>
                         <GridItem colSpan={{ base: 1, lg: 2 }}>
-                            <Box>
+                            <Box display="flex" flexDir="column">
                                 <StockStatistics stats={statisticData} marketCap={marketCap} />
                             </Box>
                         </GridItem>
                     </>
                 ) : (
-                    <Box display="flex" justifyContent="center" alignItems="center">
+                    <GridItem colSpan={{ base: 1, lg: 2 }} justifySelf="center" alignSelf="center">
                         <Spinner color="addition.100" emptyColor="background.500" thickness="0.5rem" speed="0.75s" size="xl" />
-                    </Box>
+                    </GridItem>
                 )}
             </Grid>
         </>

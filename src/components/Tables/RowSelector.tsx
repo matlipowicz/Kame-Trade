@@ -1,10 +1,11 @@
-import { Box, Text, Select } from "@chakra-ui/react";
-export const RowSelector = ({ table }: { table: any }) => {
+import { Box, Select } from "@chakra-ui/react";
+import { Table } from "@tanstack/react-table";
+export const RowSelector = <T,>({ table }: { table: Table<T> }) => {
     const rowSelectionNumber: number[] = [10, 20, 30, 40, 50];
+
     return (
         <>
-            <Box display="flex" gap="1.5rem">
-                <Text>Show</Text>
+            <Box display="flex" gap={{ base: "0.5rem", lg: "1.5rem" }} flexDir={{ base: "column", lg: "row" }}>
                 <Box>
                     <Select
                         value={table.getState().pagination.pageSize}
@@ -18,13 +19,11 @@ export const RowSelector = ({ table }: { table: any }) => {
                     >
                         {rowSelectionNumber.map((pageSize) => (
                             <option key={pageSize} value={pageSize}>
-                                {pageSize}
+                                {pageSize + " " + "rows"}
                             </option>
                         ))}
                     </Select>
                 </Box>
-
-                <Text>rows per page</Text>
             </Box>
         </>
     );
