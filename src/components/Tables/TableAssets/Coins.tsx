@@ -57,8 +57,6 @@ export const Coins = ({ globalFilter, setGlobalFilter }: { globalFilter: string;
         queryFn: () => coinsData(750),
     });
 
-    console.log(visible);
-
     const coinsDataResponse = coinsTable?.data?.coins;
 
     const coinTable = useReactTable({
@@ -93,7 +91,7 @@ export const Coins = ({ globalFilter, setGlobalFilter }: { globalFilter: string;
                 </Table>
             </Box>
             {coinsDataResponse && (
-                <HStack display="flex" alignItems="center" justifyContent="space-between" mt="3rem" w="100%">
+                <HStack display="flex" alignItems="center" justifyContent="space-between" mt="3rem" w="100%" p={{ base: "0 1rem", md: "0 0" }}>
                     <RowSelector table={coinTable} />
                     <TablePagination table={coinTable} data={coinsDataResponse} />
                 </HStack>

@@ -11,7 +11,7 @@ import { AvatarOptions } from "src/components/Login/AvatarOptions";
 export const SideNav = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
     const btnRef = useRef<any>();
     const auth = useContext(AuthContext);
-    console.log(auth);
+
     return (
         <>
             <Hide above="xl">
