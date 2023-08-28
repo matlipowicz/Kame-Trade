@@ -60,7 +60,6 @@ export function App() {
                                     path="/profile"
                                     element={
                                         <ProtectedRoute>
-                                            {/* <Profile /> */}
                                             <Construction />
                                         </ProtectedRoute>
                                     }
@@ -69,13 +68,10 @@ export function App() {
                                     path="/simulate_investment"
                                     element={
                                         <ProtectedRoute>
-                                            {/* <SymulateInvest /> */}
                                             <Construction />
                                         </ProtectedRoute>
                                     }
                                 />
-                                {/* <Route path="/profile" element={<Construction />} />
-                                    <Route path="/symulate_investment" element={<Construction />} /> */}
 
                                 <Route
                                     path="/login"
